@@ -20,14 +20,12 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Wiring (Dependency Injection manual)
         RepositorioUsuario userRepo = new RepositorioUsuarioTxt("data/users.txt");
         RepositorioMensagem messageRepo = new RepositorioMensagemTxt("data/messages.txt");
 
         ServicoUsuario userService = new ServicoUsuario(userRepo);
         ServicoMensagem messageService = new ServicoMensagem(messageRepo, userRepo);
 
-        // adicionar observador (console) ao servico de mensagens
         messageService.registrarObservador(new NotificadorConsole());
 
         // garantir que admin exista
@@ -50,7 +48,6 @@ public class Main {
         }
     }
 
-    // Helper de saída: cabeçalho simpĺes
     private static void printHeader(String title) {
         System.out.println();
         System.out.println("========================================");
@@ -58,11 +55,10 @@ public class Main {
         System.out.println("========================================");
     }
 
-    // Helper: desenha uma caixinha com título e linhas
     private static void printBox(String title, List<String> lines) {
         int width = title.length();
         for (String l : lines) if (l.length() > width) width = l.length();
-        width += 4; // padding
+        width += 4; 
         String border = "+" + "-".repeat(Math.max(0, width)) + "+";
         System.out.println(border);
         String centered = "| " + padBoth(title, width - 2) + " |";
