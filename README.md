@@ -130,7 +130,3 @@ mvn test
 
 ---
 
-Se quiser, eu posso adicionar uma seção de exemplos de uso (ex.: um walkthrough com entradas e saída), ou incluir instruções para empacotar/rodar um jar (mvn package e java -jar). Quer que eu adicione isso?
-
-*** Entrega atualizada: código funcional com testes que cobrem criação de usuários e envio de mensagens. ***
-*** Fim do README atualizado. ***
