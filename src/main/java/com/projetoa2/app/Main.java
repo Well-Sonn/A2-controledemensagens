@@ -1,7 +1,6 @@
 package com.projetoa2.app;
 
 import com.projetoa2.factory.FabricaUsuario;
-import com.projetoa2.factory.FabricaMensagem;
 import com.projetoa2.model.Usuario;
 import com.projetoa2.model.Mensagem;
 import com.projetoa2.repository.RepositorioUsuario;
